@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,118 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="byM-Qc-liV"/>
+                        <viewControllerLayoutGuide type="bottom" id="p4o-6c-qxU"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDl-pg-oF4">
+                                <rect key="frame" x="123" y="588" width="128" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.32705377327167362" green="0.44126744923857864" blue="0.39439498507796222" alpha="0.68412885273972601" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" red="0.87835104695431476" green="0.87835104695431476" blue="0.87835104695431476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onStartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xMh-Ev-5iQ"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEW-DL-kqG">
+                                <rect key="frame" x="10" y="28" width="357" height="552"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.39718000856164382" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.94681947969543145" green="0.94681947969543145" blue="0.94681947969543145" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TB7-1L-qGR">
+                                <rect key="frame" x="292" y="28" width="75" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36007586990000001" green="0.48372065359999999" blue="0.43013978139999998" alpha="0.87569563360000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <state key="normal" title="clear">
+                                    <color key="titleColor" red="0.878351047" green="0.878351047" blue="0.878351047" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Io0-FB-AcI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNm-mo-Kyu">
+                                <rect key="frame" x="16" y="588" width="75" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.36007586990000001" green="0.48372065359999999" blue="0.43013978139999998" alpha="0.42618257705479451" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <state key="normal" title="sign">
+                                    <color key="titleColor" red="0.78317338197969544" green="0.78317338197969544" blue="0.78317338197969544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSignificantButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a2Z-10-Npb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXo-th-zoN">
+                                <rect key="frame" x="10" y="28" width="49" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36007586990000001" green="0.48372065359999999" blue="0.43013978139999998" alpha="0.43857020547945208" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <state key="normal" title="^">
+                                    <color key="titleColor" red="0.878351047" green="0.878351047" blue="0.878351047" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTextShowButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CtQ-l0-ySs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18197054512684124" green="0.13597394684266417" blue="0.2610247461928934" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="UjE-1e-bc0"/>
                     </view>
+                    <connections>
+                        <outlet property="clearButton" destination="TB7-1L-qGR" id="Kkn-UG-LxG"/>
+                        <outlet property="signButton" destination="vNm-mo-Kyu" id="fI3-Lt-Oeq"/>
+                        <outlet property="startButton" destination="BDl-pg-oF4" id="ACZ-B8-lTU"/>
+                        <outlet property="textShowButton" destination="dXo-th-zoN" id="YgI-9A-2uq"/>
+                        <outlet property="textView" destination="zEW-DL-kqG" id="Nqp-g2-VKK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1055.2" y="-0.44977511244377816"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="vRU-1u-iIy">
+            <objects>
+                <viewController id="XQA-DO-HPA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="34q-De-y5b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="IaQ-zo-8VP"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="Ogw-YR-oa1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b3T-dF-bwZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="633" y="332"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="g5W-x1-40Y">
+            <objects>
+                <viewController id="Obc-j6-DOu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EGa-m2-aIY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ZGb-fx-5Gy"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="v9n-go-S4p"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VVL-y2-FBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="633" y="-332"/>
         </scene>
     </scenes>
 </document>
