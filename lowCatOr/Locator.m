@@ -58,7 +58,7 @@
     [self.locationManager startMonitoringSignificantLocationChanges];
     
     if (!_significantOnly) {
-        self.locationManager.distanceFilter = 50.;
+        self.locationManager.distanceFilter = 100.;
         self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
         [self.locationManager startUpdatingLocation];
     }
